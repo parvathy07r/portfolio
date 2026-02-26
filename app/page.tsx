@@ -61,26 +61,37 @@ export default function Home() {
           <div className="space-y-3">
             <article className="flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-colors hover:border-zinc-500">
               <div className="space-y-1">
-                <h4 className="text-sm font-medium">Project One</h4>
-                <p className="text-xs text-zinc-400">Role · Short description</p>
+                <h4 className="text-sm font-medium">TOA Software Corp.</h4>
+                <p className="text-xs text-zinc-400">Software Engineer</p>
               </div>
-              <p className="text-xs text-zinc-500">Year</p>
+               <div className="space-y-1">
+                <p className="text-xs text-zinc-500">October 2024 - Present</p>
+                <p className="text-xs text-zinc-500 text-end">Tottori, Japan</p>
+               </div>
             </article>
 
             <article className="flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-colors hover:border-zinc-500">
               <div className="space-y-1">
-                <h4 className="text-sm font-medium">Project Two</h4>
-                <p className="text-xs text-zinc-400">Role · Short description</p>
+                <h4 className="text-sm font-medium">TOA Software Corp.</h4>
+                <p className="text-xs text-zinc-400">Software Engineering Intern</p>
               </div>
-              <p className="text-xs text-zinc-500">Year</p>
+               <div className="space-y-1">
+                <p className="text-xs text-zinc-500">February 2024 - March 2024</p>
+                <p className="text-xs text-zinc-500 text-end">Tottori, Japan</p>
+               </div>
+              
             </article>
 
             <article className="flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-colors hover:border-zinc-500">
               <div className="space-y-1">
-                <h4 className="text-sm font-medium">Project Three</h4>
-                <p className="text-xs text-zinc-400">Role · Short description</p>
+                <h4 className="text-sm font-medium">Aspire Systems</h4>
+                <p className="text-xs text-zinc-400">Software Engineer</p>
               </div>
-              <p className="text-xs text-zinc-500">Year</p>
+               <div className="space-y-1">
+                <p className="text-xs text-zinc-500">July 2021 - March 2022</p>
+                <p className="text-xs text-zinc-500 text-end">Ernakulam, Kerala, India</p>
+               </div>
+              
             </article>
           </div>
         </section>
