@@ -15,39 +15,44 @@ export default function Home() {
 
           <div className="space-y-4">
             <h3 className="text-xl font-medium">Skills</h3>
-            <div className="grid grid-cols-2 gap-3 text-xs text-zinc-300 md:grid-cols-4">
-              {[
-                { label: "JavaScript", src: "/skills/javascript.svg" },
-                { label: "React", src: "/skills/react.svg" },
-                { label: "Node.js", src: "/skills/node.svg" },
-                { label: "Next.js", src: "/skills/nextjs.svg" },
-                { label: "Ruby on Rails", src: "/skills/rails.svg" },
-                { label: "HTML/CSS", src: "/skills/html.svg" },
-                { label: "Python", src: "/skills/python.svg" },
-                { label: "Java", src: "/skills/java.svg" },
-                { label: "MySQL", src: "/skills/mysql.svg" },
-                { label: "PostgreSQL", src: "/skills/postgresql.svg" },
-                { label: "TypeScript", src: "/skills/typescript.svg" },
-                { label: "Git & GitHub", src: "/skills/github.svg" },
-                { label: "Figma", src: "/skills/figma.svg" },
-           
-              ].map((skill) => (
-                <div
-                  key={skill.label}
-                  className="group flex h-10 w-full items-center gap-2 rounded-full border border-zinc-700 bg-zinc-950/40 px-4 text-[0.7rem] transition-all duration-200 hover:-translate-y-0.5 hover:border-zinc-400 hover:bg-zinc-900/80"
-                >
-                  <span className="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full border border-zinc-600 bg-zinc-900 transition-transform duration-200 group-hover:scale-110">
-                    <Image
-                      src={skill.src}
-                      alt={skill.label}
-                      width={24}
-                      height={24}
-                      className="h-5 w-5 object-contain"
-                    />
-                  </span>
-                  <span className="truncate">{skill.label}</span>
+            <div className="flex justify-center">
+              <div className="w-full max-w-4xl rounded-3xl border border-zinc-800 bg-zinc-950/40 p-5 md:p-6">
+                <div className="grid grid-cols-2 gap-4 text-xs text-zinc-300 md:grid-cols-4">
+                  {[
+                    { label: "JavaScript", src: "/skills/javascript.svg" },
+                    { label: "React", src: "/skills/react.svg" },
+                    { label: "Node.js", src: "/skills/node.svg" },
+                    { label: "Next.js", src: "/skills/nextjs.svg" },
+                    { label: "Ruby on Rails", src: "/skills/rails.svg" },
+                    { label: "HTML/CSS", src: "/skills/html.svg" },
+                    { label: "Python", src: "/skills/python.svg" },
+                    { label: "Java", src: "/skills/java.svg" },
+                    { label: "MySQL", src: "/skills/mysql.svg" },
+                    { label: "PostgreSQL", src: "/skills/postgresql.svg" },
+                    { label: "TypeScript", src: "/skills/typescript.svg" },
+                    { label: "Git & GitHub", src: "/skills/github.svg" },
+                    { label: "Figma", src: "/skills/figma.svg" },
+                  ].map((skill) => (
+                    <div
+                      key={skill.label}
+                      className="group flex flex-col items-center justify-between rounded-2xl border border-zinc-800 bg-zinc-950/70 px-4 py-4 text-center transition-all duration-300 ease-out hover:-translate-y-1 hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)]"
+                    >
+                      <div className="mb-3 flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-zinc-700 bg-zinc-900 transition-transform duration-300 group-hover:scale-105">
+                        <Image
+                          src={skill.src}
+                          alt={skill.label}
+                          width={40}
+                          height={40}
+                          className="h-8 w-8 object-contain"
+                        />
+                      </div>
+                      <span className="text-[0.7rem] font-medium tracking-wide text-zinc-300 group-hover:text-zinc-50">
+                        {skill.label}
+                      </span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </section>
