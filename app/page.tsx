@@ -13,7 +13,7 @@ export default function Home() {
 
           <div className="space-y-4">
             <h3 className="text-xl font-medium">Skills</h3>
-            <div className="flex flex-wrap gap-2 text-xs text-zinc-300">
+            <div className="grid grid-cols-2 gap-3 text-xs text-zinc-300 md:grid-cols-4">
               {[
                 { label: "JavaScript", icon: "JS" },
                 { label: "React", icon: "⚛" },
@@ -30,15 +30,15 @@ export default function Home() {
                 { label: "Figma", icon: "Fg" },
                 { label: "MongoDB", icon: "Mg" },
               ].map((skill) => (
-                <span
+                <div
                   key={skill.label}
-                  className="inline-flex items-center gap-2 rounded-full border border-zinc-700 bg-zinc-950/40 px-3 py-1"
+                  className="group flex h-10 w-full items-center gap-2 rounded-full border border-zinc-700 bg-zinc-950/40 px-4 text-[0.7rem] transition-all duration-200 hover:-translate-y-0.5 hover:border-zinc-400 hover:bg-zinc-900/80"
                 >
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-zinc-600 bg-zinc-900 text-[0.6rem] text-zinc-200">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-zinc-600 bg-zinc-900 text-[0.6rem] text-zinc-200 transition-transform duration-200 group-hover:scale-110">
                     {skill.icon}
                   </span>
-                  <span>{skill.label}</span>
-                </span>
+                  <span className="truncate">{skill.label}</span>
+                </div>
               ))}
             </div>
           </div>
