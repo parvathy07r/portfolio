@@ -6,8 +6,8 @@ export default function Home() {
           <div className="space-y-3">
             <h3 className="text-2xl font-semibold">Parvathy Rajasekharan</h3>
             <p className="text-sm leading-relaxed text-zinc-400">
-              This is where your personal introduction will go – who you are, what
-              you do, and what drives your work.
+              I’m a software engineer based in Japan, currently building products at TOA Software Corp.. I currently do Full Stack Web Development.
+              My goal is to keep learning, keep building, and contribute to meaningful, well-crafted software.
             </p>
           </div>
 
