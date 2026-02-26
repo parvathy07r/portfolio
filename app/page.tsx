@@ -37,13 +37,13 @@ export default function Home() {
                       key={skill.label}
                       className="group flex flex-col items-center justify-between rounded-2xl border border-zinc-800 bg-zinc-950/70 px-4 py-4 text-center transition-all duration-300 ease-out hover:-translate-y-1 hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)]"
                     >
-                      <div className="mb-3 flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-zinc-700 bg-zinc-900 transition-transform duration-300 group-hover:scale-105">
+                      <div className="mb-3 flex h-10 w-10 items-center justify-center">
                         <Image
                           src={skill.src}
                           alt={skill.label}
                           width={40}
                           height={40}
-                          className="h-8 w-8 object-contain"
+                          className="h-8 w-8 object-contain transition-transform duration-300 group-hover:scale-105"
                         />
                       </div>
                       <span className="text-[0.7rem] font-medium tracking-wide text-zinc-300 group-hover:text-zinc-50">
