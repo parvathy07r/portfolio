@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-zinc-100">
@@ -15,27 +17,33 @@ export default function Home() {
             <h3 className="text-xl font-medium">Skills</h3>
             <div className="grid grid-cols-2 gap-3 text-xs text-zinc-300 md:grid-cols-4">
               {[
-                { label: "JavaScript", icon: "JS" },
-                { label: "React", icon: "⚛" },
-                { label: "Node.js", icon: "Nd" },
-                { label: "Next.js", icon: "N" },
-                { label: "Ruby on Rails", icon: "Rb" },
-                { label: "HTML/CSS", icon: "</>" },
-                { label: "Python", icon: "Py" },
-                { label: "Java", icon: "J" },
-                { label: "MySQL", icon: "My" },
-                { label: "PostgreSQL", icon: "Pg" },
-                { label: "TypeScript", icon: "TS" },
-                { label: "Git & GitHub", icon: "⧉" },
-                { label: "Figma", icon: "Fg" },
-                { label: "MongoDB", icon: "Mg" },
+                { label: "JavaScript", src: "/skills/javascript.svg" },
+                { label: "React", src: "/skills/react.svg" },
+                { label: "Node.js", src: "/skills/node.svg" },
+                { label: "Next.js", src: "/skills/nextjs.svg" },
+                { label: "Ruby on Rails", src: "/skills/rails.svg" },
+                { label: "HTML/CSS", src: "/skills/html.svg" },
+                { label: "Python", src: "/skills/python.svg" },
+                { label: "Java", src: "/skills/java.svg" },
+                { label: "MySQL", src: "/skills/mysql.svg" },
+                { label: "PostgreSQL", src: "/skills/postgresql.svg" },
+                { label: "TypeScript", src: "/skills/typescript.svg" },
+                { label: "Git & GitHub", src: "/skills/github.svg" },
+                { label: "Figma", src: "/skills/figma.svg" },
+           
               ].map((skill) => (
                 <div
                   key={skill.label}
                   className="group flex h-10 w-full items-center gap-2 rounded-full border border-zinc-700 bg-zinc-950/40 px-4 text-[0.7rem] transition-all duration-200 hover:-translate-y-0.5 hover:border-zinc-400 hover:bg-zinc-900/80"
                 >
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full border border-zinc-600 bg-zinc-900 text-[0.6rem] text-zinc-200 transition-transform duration-200 group-hover:scale-110">
-                    {skill.icon}
+                  <span className="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full border border-zinc-600 bg-zinc-900 transition-transform duration-200 group-hover:scale-110">
+                    <Image
+                      src={skill.src}
+                      alt={skill.label}
+                      width={24}
+                      height={24}
+                      className="h-5 w-5 object-contain"
+                    />
                   </span>
                   <span className="truncate">{skill.label}</span>
                 </div>
