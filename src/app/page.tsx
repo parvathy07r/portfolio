@@ -1,21 +1,34 @@
 import Image from "next/image";
+import { getAvatar } from "../utils";
 
 export default function Home() {
+  const name = "Parvathy Rajasekharan";
+  const avatar = getAvatar(name);
   return (
     <div className="min-h-screen bg-black text-zinc-100">
       <main className="mx-auto max-w-5xl px-6 py-10 md:px-12 md:py-16">
         <section id="about" className="max-w-3xl space-y-8 pb-16">
-          <div className="space-y-3">
-            <h3 className="text-2xl font-semibold">Parvathy Rajasekharan</h3>
-            <p className="text-sm leading-relaxed text-zinc-400">
-              I’m a software engineer based in Japan, currently building products at TOA Software Corp.. 
-            </p>
-             <p className="text-sm leading-relaxed text-zinc-400">    
-              I currently do Full Stack Web Development.        
-            </p>
-             <p className="text-sm leading-relaxed text-zinc-400">  
-              My goal is to keep learning, keep building, and contribute to meaningful, well-crafted software.
-            </p>
+          <div className="flex items-start gap-4">
+            <div className="space-y-3">
+              <div className="flex items-center gap-4">
+                <div className="group relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-zinc-700 bg-zinc-900 text-sm font-medium tracking-wide text-zinc-100 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-400 hover:shadow-[0_0_35px_rgba(250,250,250,0.2)] cursor-pointer">
+                  <span className="select-none">{avatar}</span>
+                </div>
+                <h3 className="text-2xl font-semibold">{name}</h3>
+              </div>
+
+              <p className="text-sm leading-relaxed text-zinc-400">
+                I’m a software engineer based in Japan, currently building
+                products at TOA Software Corp..
+              </p>
+              <p className="text-sm leading-relaxed text-zinc-400">
+                I currently do Full Stack Web Development.
+              </p>
+              <p className="text-sm leading-relaxed text-zinc-400">
+                My goal is to keep learning, keep building, and contribute to
+                meaningful, well-crafted software.
+              </p>
+            </div>
           </div>
 
           <div className="space-y-4">
@@ -82,22 +95,25 @@ export default function Home() {
                 <h4 className="text-sm font-medium">TOA Software Corp.</h4>
                 <p className="text-xs text-zinc-400">Software Engineer</p>
               </div>
-               <div className="space-y-1">
+              <div className="space-y-1">
                 <p className="text-xs text-zinc-500">October 2024 - Present</p>
                 <p className="text-xs text-zinc-500 text-end">Tottori, Japan</p>
-               </div>
+              </div>
             </article>
 
             <article className="flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-colors hover:border-zinc-500">
               <div className="space-y-1">
                 <h4 className="text-sm font-medium">TOA Software Corp.</h4>
-                <p className="text-xs text-zinc-400">Software Engineering Intern</p>
+                <p className="text-xs text-zinc-400">
+                  Software Engineering Intern
+                </p>
               </div>
-               <div className="space-y-1">
-                <p className="text-xs text-zinc-500">February 2024 - March 2024</p>
+              <div className="space-y-1">
+                <p className="text-xs text-zinc-500">
+                  February 2024 - March 2024
+                </p>
                 <p className="text-xs text-zinc-500 text-end">Tottori, Japan</p>
-               </div>
-              
+              </div>
             </article>
 
             <article className="flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-colors hover:border-zinc-500">
@@ -105,11 +121,12 @@ export default function Home() {
                 <h4 className="text-sm font-medium">Aspire Systems</h4>
                 <p className="text-xs text-zinc-400">Software Engineer</p>
               </div>
-               <div className="space-y-1">
+              <div className="space-y-1">
                 <p className="text-xs text-zinc-500">July 2021 - March 2022</p>
-                <p className="text-xs text-zinc-500 text-end">Ernakulam, Kerala, India</p>
-               </div>
-              
+                <p className="text-xs text-zinc-500 text-end">
+                  Ernakulam, Kerala, India
+                </p>
+              </div>
             </article>
           </div>
         </section>
