@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-zinc-100">
       <main className="mx-auto max-w-5xl px-6 py-10 md:px-12 md:py-16">
-        <section id="about" className="max-w-3xl space-y-8 pb-16">
+        <section id="about" className="max-w-3xl space-y-8 pb-0">
           <div className="flex items-start gap-4">
             <div className="space-y-3">
               <div className="flex items-center gap-4">
@@ -80,13 +80,11 @@ export default function Home() {
           className="max-w-4xl space-y-6 border-t border-zinc-900 pt-12"
         >
           <div className="space-y-3">
-            <h2 className="text-xs font-medium uppercase tracking-[0.25em] text-zinc-500">
-              Work
+            <h2 className="text-xl font-medium">
+              Work Experience
             </h2>
-            <h3 className="text-2xl font-semibold">Selected work</h3>
-            <p className="text-sm leading-relaxed text-zinc-400">
-              A snapshot of projects that highlight your experience and craft.
-            </p>
+           
+            
           </div>
 
           <div className="space-y-3">
