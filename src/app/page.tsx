@@ -56,13 +56,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-zinc-100">
       <main className="mx-auto max-w-5xl px-6 py-10 md:px-12 md:py-16">
-        <section id="about" className="max-w-3xl space-y-8 pb-0">
+        <section id="about" className="max-w-4xl space-y-8 pb-0">
           <div className="flex items-start gap-4">
             <div className="space-y-3">
               <div className="flex items-center gap-4">
-                <div className="group relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-zinc-700 bg-zinc-900 text-sm font-medium tracking-wide text-zinc-100 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-400 hover:shadow-[0_0_35px_rgba(250,250,250,0.2)] cursor-pointer">
-                  <span className="select-none">{avatar}</span>
-                </div>
                 <h3 className="text-2xl font-semibold">{name}</h3>
               </div>
 
@@ -83,7 +80,7 @@ export default function Home() {
           <div className="space-y-4">
             <h3 className="text-xl font-medium">Skills</h3>
             <div className="flex justify-center">
-              <div className="w-full max-w-4xl rounded-3xl border border-zinc-800 bg-zinc-950/40 p-5 md:p-6">
+              <div className="w-full rounded-3xl border border-zinc-800 bg-zinc-950/40 p-5 md:p-6">
                 <div className="grid grid-cols-2 gap-4 text-xs text-zinc-300 md:grid-cols-4">
                   {[
                     { label: "JavaScript", src: "/skills/javascript.svg" },
@@ -102,7 +99,7 @@ export default function Home() {
                   ].map((skill) => (
                     <div
                       key={skill.label}
-                      className="group flex flex-col items-center justify-between rounded-2xl border border-zinc-800 bg-zinc-950/70 px-4 py-4 text-center transition-all duration-300 ease-out hover:-translate-y-1 hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)] cursor-pointer"
+                      className="group flex flex-col items-center justify-between rounded-2xl border border-zinc-800 bg-zinc-950/70 px-4 py-4 text-center transition-all duration-300 ease-out hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)] cursor-pointer"
                     >
                       <div className="mb-3 flex h-10 w-10 items-center justify-center">
                         <Image
@@ -126,7 +123,7 @@ export default function Home() {
 
         <section
           id="projects"
-          className="max-w-4xl space-y-6 border-t border-zinc-900 pt-12"
+          className="max-w-4xl space-y-6  border-zinc-900 pt-12"
         >
           <div className="space-y-3">
             <h2 className="text-xl font-medium">Projects</h2>
@@ -135,7 +132,7 @@ export default function Home() {
 
         <section
           id="work"
-          className="max-w-4xl space-y-6 border-t border-zinc-900 pt-12"
+          className="max-w-4xl space-y-6  border-zinc-900 pt-12"
         >
           <div className="space-y-3">
             <h2 className="text-xl font-medium">Work Experience</h2>
@@ -174,7 +171,7 @@ export default function Home() {
                           {index < exp.roles.length - 1 && (
                             <div className="absolute left-[-1.4375rem] top-[calc(1.1rem+0.3125rem)] h-[calc(100%+1.5rem)] w-px bg-zinc-800" />
                           )}
-                          <article className="rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)] cursor-pointer">
+                          <article className="rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-all duration-300 ease-out hover:- hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)] cursor-pointer">
                             <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                               <div className="space-y-1">
                                 <h4 className="text-sm font-medium text-zinc-100">
