@@ -4,6 +4,55 @@ import { getAvatar } from "../utils";
 export default function Home() {
   const name = "Parvathy Rajasekharan";
   const avatar = getAvatar(name);
+  const workExperience = [
+    {
+      company: "TOA Software Corp.",
+      logoSrc: "/images/toa_logo.jpg",
+      logoAlt: "TOA Software Corp.",
+      location: "Tottori, Japan",
+      roles: [
+        {
+          title: "Software Engineer",
+          from: "October 2024",
+          to: "Present",
+          bullets: [
+            "Currently developing an internal certification management system with a focus on frontend architecture and UI implementation using React and TypeScript.",
+            "Contributed to a web-based attendance management app using React.js on the frontend and Node.js to streamline staff tracking and operations.",
+            "Worked on a web-based daily report and employee operations system using React.js and Ruby on Rails.",
+            "Developed a full-stack reporting workflow using React.js and Node.js to simplify report submission and management.",
+          ],
+        },
+        {
+          title: "Software Engineering Intern",
+          from: "February 2024",
+          to: "March 2024",
+          bullets: [
+            "Developed the frontend and backend of a web application using ReactJS and FastAPI.",
+            "Developed responsive UI screens and components aligned with design specs.",
+            "Worked closely with engineers to iterate quickly and deliver production-ready features.",
+          ],
+        },
+      ],
+    },
+    {
+      company: "Aspire Systems",
+      logoSrc: "/images/aspire_systems_logo.jpg",
+      logoAlt: "Aspire Systems",
+      location: "Ernakulam, Kerala, India",
+      roles: [
+        {
+          title: "Software Engineer",
+          from: "July 2021",
+          to: "March 2022",
+          bullets: [
+            "Worked on backend services for an employee management system using Spring Boot.",
+            "Built backend services and APIs with an emphasis on clean contracts and maintainability.",
+            "Worked in an agile environment to deliver features, fixes, and improvements on schedule.",
+          ],
+        },
+      ],
+    },
+  ];
   return (
     <div className="min-h-screen bg-black text-zinc-100">
       <main className="mx-auto max-w-5xl px-6 py-10 md:px-12 md:py-16">
@@ -92,230 +141,108 @@ export default function Home() {
             <h2 className="text-xl font-medium">Work Experience</h2>
           </div>
 
-          <div className="space-y-6">
-            <article className="flex items-start space-x-4 rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)] cursor-pointer">
-              <div className="mt-1 h-10 w-10 flex-shrink-0 rounded-full border border-zinc-700 bg-zinc-900 flex items-center justify-center overflow-hidden">
-                <img
-                  src="/images/toa_logo.jpg"
-                  alt="TOA Software Corp."
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <div className="flex-grow space-y-1">
-                <h4 className="text-sm font-medium">Software Engineer</h4>
-                <p className="text-xs text-zinc-400">
-                  TOA Software Corp. · Full-time
-                </p>
-                <p className="text-xs text-zinc-500">
-                  October 2024 - Present · 1 yr 6 mos
-                </p>
-                <p className="text-xs text-zinc-500">
-                  Tottori, Japan · On-site
-                </p>
-                <div className="flex flex-wrap items-center gap-2 pt-2">
-                  <span className="flex items-center text-xs text-purple-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="h-4 w-4 mr-1"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Certification Management System
-                  </span>
-                  <span className="flex items-center text-xs text-purple-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="h-4 w-4 mr-1"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Hinomaru Kintai
-                  </span>
-                  <span className="flex items-center text-xs text-purple-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="h-4 w-4 mr-1"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Nippo System
-                  </span>
-                  <span className="flex items-center text-xs text-purple-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="h-4 w-4 mr-1"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Hokoku System
-                  </span>
+          <div className="space-y-10">
+            {workExperience.map((exp) => (
+              <div key={exp.company} className="space-y-5">
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 h-10 w-10 flex-shrink-0 overflow-hidden rounded-full border border-zinc-700 bg-zinc-900">
+                    <Image
+                      src={exp.logoSrc}
+                      alt={exp.logoAlt}
+                      width={40}
+                      height={40}
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <h3 className="text-sm font-semibold text-zinc-100">
+                      {exp.company}
+                    </h3>
+                    <p className="text-xs text-zinc-500">{exp.location}</p>
+                  </div>
                 </div>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-300">
-                    React
-                  </span>
-                  <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-300">
-                    TypeScript
-                  </span>
-                  <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-300">
-                    Node.js
-                  </span>
-                  <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-300">
-                    Ruby on Rails
-                  </span>
-                  <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-300">
-                    Frontend Architecture
-                  </span>
-                </div>
-              </div>
-            </article>
 
-            <article className="flex items-start space-x-4 rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)] cursor-pointer">
-              <div className="mt-1 h-10 w-10 flex-shrink-0 rounded-full border border-zinc-700 bg-zinc-900 flex items-center justify-center overflow-hidden">
-                <img
-                  src="/images/toa_logo.jpg"
-                  alt="TOA Software Corp."
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <div className="flex-grow space-y-1">
-                <h4 className="text-sm font-medium">
-                  Software Engineering Intern
-                </h4>
-                <p className="text-xs text-zinc-400">
-                  TOA Software Corp. · Internship
-                </p>
-                <p className="text-xs text-zinc-500">
-                  February 2024 - March 2024 · 2 mos
-                </p>
-                <p className="text-xs text-zinc-500">
-                  Tottori, Japan · On-site
-                </p>
-                <div className="flex flex-wrap items-center gap-2 pt-2">
-                  <span className="flex items-center text-xs text-purple-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="h-4 w-4 mr-1"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Web Application Development
-                  </span>
-                  <span className="flex items-center text-xs text-purple-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="h-4 w-4 mr-1"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Figma Design
-                  </span>
-                </div>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-300">
-                    ReactJS
-                  </span>
-                  <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-300">
-                    FastAPI
-                  </span>
-                  <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-300">
-                    Figma
-                  </span>
-                  <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-300">
-                    UI/UX Design
-                  </span>
-                </div>
-              </div>
-            </article>
+                {exp.roles.length > 1 ? (
+                  <div className="relative pl-8">
+                    <div className="space-y-6">
+                      {exp.roles.map((role, index) => (
+                        <div
+                          key={`${exp.company}-${role.title}-${role.from}-${role.to}`}
+                          className="relative"
+                        >
+                          <div className="absolute left-[-1.75rem] top-[1.1rem] h-2.5 w-2.5 rounded-full border border-zinc-600 bg-zinc-950 z-10" />
+                          {index < exp.roles.length - 1 && (
+                            <div className="absolute left-[-1.4375rem] top-[calc(1.1rem+0.3125rem)] h-[calc(100%+1.5rem)] w-px bg-zinc-800" />
+                          )}
+                          <article className="rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)] cursor-pointer">
+                            <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                              <div className="space-y-1">
+                                <h4 className="text-sm font-medium text-zinc-100">
+                                  {role.title}
+                                </h4>
+                                <p className="text-xs text-zinc-400">
+                                  {exp.company}
+                                </p>
+                              </div>
+                              <div className="space-y-1 text-left sm:text-right">
+                                <p className="text-xs text-zinc-400">
+                                  {exp.location}
+                                </p>
+                                <p className="text-xs text-zinc-500">
+                                  {role.from} - {role.to}
+                                </p>
+                              </div>
+                            </div>
 
-            <article className="flex items-start space-x-4 rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)] cursor-pointer">
-              <div className="mt-1 h-10 w-10 flex-shrink-0 rounded-full border border-zinc-700 bg-zinc-900 flex items-center justify-center overflow-hidden">
-                <img
-                  src="/images/aspire_systems_logo.jpg"
-                  alt="Aspire Systems"
-                  className="h-full w-full object-contain"
-                />
+                            <ul className="mt-3 list-disc space-y-2 pl-4 text-sm text-zinc-300">
+                              {role.bullets.map((b) => (
+                                <li key={b}>{b}</li>
+                              ))}
+                            </ul>
+                          </article>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="pl-8">
+                    <div className="space-y-6">
+                      {exp.roles.map((role) => (
+                        <article
+                          key={`${exp.company}-${role.title}-${role.from}-${role.to}`}
+                          className="rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)] cursor-pointer"
+                        >
+                          <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                            <div className="space-y-1">
+                              <h4 className="text-sm font-medium text-zinc-100">
+                                {role.title}
+                              </h4>
+                              <p className="text-xs text-zinc-400">
+                                {exp.company}
+                              </p>
+                            </div>
+                            <div className="space-y-1 text-left sm:text-right">
+                              <p className="text-xs text-zinc-400">
+                                {exp.location}
+                              </p>
+                              <p className="text-xs text-zinc-500">
+                                {role.from} - {role.to}
+                              </p>
+                            </div>
+                          </div>
+
+                          <ul className="mt-3 list-disc space-y-2 pl-4 text-sm text-zinc-300">
+                            {role.bullets.map((b) => (
+                              <li key={b}>{b}</li>
+                            ))}
+                          </ul>
+                        </article>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
-              <div className="flex-grow space-y-1">
-                <h4 className="text-sm font-medium">Software Engineer</h4>
-                <p className="text-xs text-zinc-400">
-                  Aspire Systems · Full-time
-                </p>
-                <p className="text-xs text-zinc-500">
-                  July 2021 - March 2022 · 9 mos
-                </p>
-                <p className="text-xs text-zinc-500">
-                  Ernakulam, Kerala, India · On-site
-                </p>
-                <div className="flex flex-wrap items-center gap-2 pt-2">
-                  <span className="flex items-center text-xs text-purple-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="h-4 w-4 mr-1"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Employee Management System Backend
-                  </span>
-                </div>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-300">
-                    Spring Boot
-                  </span>
-                  <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-300">
-                    Java
-                  </span>
-                  <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-300">
-                    API Development
-                  </span>
-                  <span className="rounded-full border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-300">
-                    Backend Development
-                  </span>
-                </div>
-              </div>
-            </article>
+            ))}
           </div>
         </section>
       </main>
