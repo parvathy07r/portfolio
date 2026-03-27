@@ -53,6 +53,46 @@ export default function Home() {
       ],
     },
   ];
+
+  const projects = [
+    {
+      title: "TDC Play – Gamified Tourism Web App (Hackathon Award Winner)",
+      date: "November 2025",
+      bullets: [
+        "Built an interactive web application using React, Node.js, and PostgreSQL.",
+        "Implemented QR code scanning, mission tracking, scoring, and rewards UI.",
+        "Designed dynamic and engaging user flows, improving user interaction.",
+        "Collaborated with an international agile team of engineers.",
+        "Awarded Silver Yakumo Award – Hack Yakumo 2025.",
+      ],
+    },
+    {
+      title: "Expense Tracker App",
+      date: "Dec 2024",
+      bullets: [
+        "Built a web application using React and Node.js.",
+        "Implemented features for tracking expenses and managing budgets.",
+        "Designed a clean and intuitive user interface for easy navigation.",
+      ],
+    },
+    {
+      title: "DeepWeather: Analyzing Weather Conditions using Deep Learning",
+      date: "February 2024",
+      bullets: [
+        "Developed deep learning models to predict weather conditions, with a focus on temperature forecasting.",
+        "Built and fine-tuned models to improve prediction accuracy.",
+        "Addressed challenges such as missing data handling, normalization, multicollinearity, overfitting, and vanishing gradients.",
+      ],
+    },
+    {
+      title: "Multiple Disease Prediction System using ML",
+      date: "Dec 2022",
+      bullets: [
+        "Designed and coded a web application to predict multiple diseases using machine learning.",
+        "Trained and tested multiple models to improve accuracy and personalization in predictions.",
+      ],
+    },
+  ];
   return (
     <div className="min-h-screen bg-black text-zinc-100">
       <main className="mx-auto max-w-5xl px-6 py-10 md:px-12 md:py-16">
@@ -127,6 +167,28 @@ export default function Home() {
         >
           <div className="space-y-3">
             <h2 className="text-xl font-medium">Projects</h2>
+          </div>
+
+          <div className="space-y-6">
+            {projects.map((project) => (
+              <article
+                key={`${project.title}-${project.date}`}
+                className="rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-5 transition-all duration-300 ease-out hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)] cursor-pointer"
+              >
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                  <h3 className="text-sm font-medium text-zinc-100">
+                    {project.title}
+                  </h3>
+                  <p className="text-xs text-zinc-500">{project.date}</p>
+                </div>
+
+                <ul className="mt-3 list-disc space-y-2 pl-4 text-sm text-zinc-300">
+                  {project.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
         </section>
 
