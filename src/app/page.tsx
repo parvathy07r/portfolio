@@ -1,10 +1,5 @@
 import { Navigation, Footer } from "../components/layout";
-import {
-  Hero,
-  Skills,
-  Projects,
-  Experience,
-} from "../components/sections";
+import { Hero, Skills, Projects, Experience } from "../components/sections";
 
 export default function Home() {
   const name = "Parvathy Rajasekharan";
@@ -15,8 +10,8 @@ export default function Home() {
     location: "Tottori, Japan",
     company: "TOA Software Corp.",
     description: [
-      "I'm a software engineer based in Japan, building products that make a difference.",
-      "I specialize in Full Stack Web Development with React, Node.js, and modern web technologies.",
+      "I’m a software engineer based in Japan, currently building products at TOA Software Corp.",
+      "I currently do Full Stack Web Development.",
       "My goal is to keep learning, keep building, and contribute to meaningful, well-crafted software.",
     ],
   };
@@ -41,7 +36,7 @@ export default function Home() {
     {
       title: "TDC Play – Gamified Tourism Web App",
       date: "November 2025",
-      featured: true,
+      // featured: true,
       tags: ["React", "Node.js", "PostgreSQL", "Hackathon"],
       bullets: [
         "Built an interactive web application using React, Node.js, and PostgreSQL.",
@@ -49,6 +44,28 @@ export default function Home() {
         "Designed dynamic and engaging user flows, improving user interaction.",
         "Collaborated with an international agile team of engineers.",
         "Awarded Silver Yakumo Award – Hack Yakumo 2025.",
+      ],
+    },
+    {
+      title: "Folio – Secure Rich‑Text Notes App",
+      date: "April 2026",
+      tags: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "JWT Auth",
+        "2FA (TOTP)",
+        "Lexical",
+        "TailwindCSS",
+      ],
+      bullets: [
+        "Built a full-stack notes application using Next.js (App Router), React, and PostgreSQL with user-scoped CRUD APIs.",
+        "Implemented secure authentication with bcrypt password hashing and JWT sessions stored in HTTP-only cookies, plus route protection via Next.js middleware.",
+        "Added optional Two-Factor Authentication (TOTP) including QR-based setup, verification, and disable flows integrated into the login experience.",
+        "Developed a rich-text editor using Lexical with history/undo and custom media nodes (image/video), persisting content as JSON editor state.",
+        "Designed a debounced autosave system for title/content edits and used navigator.sendBeacon() on navigation to reduce risk of losing changes.",
+        "Created an authenticated media upload API with MIME-type allowlisting and file-size limits, returning public URLs for embedding.",
       ],
     },
     {
@@ -142,8 +159,6 @@ export default function Home() {
         <Projects projects={projects} />
         <Experience experiences={workExperience} />
       </main>
-
-      <Footer />
     </div>
   );
 }

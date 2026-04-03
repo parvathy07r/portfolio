@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { MapPin, Calendar } from "lucide-react";
-import { Section, Card, CardContent, Badge } from "../ui";
+import { Section } from "../ui";
 
 interface Role {
   title: string;
@@ -32,63 +31,102 @@ export default function Experience({ experiences }: ExperienceProps) {
     >
       <div className="space-y-8">
         {experiences.map((exp) => (
-          <div key={exp.company} className="relative">
-            {/* Company Header */}
-            <div className="flex items-center gap-4 mb-6">
-              <div className="h-14 w-14 flex-shrink-0 overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900 p-2">
+          <div key={exp.company} className="space-y-5">
+            <div className="flex items-start gap-4">
+              <div className="mt-1 h-10 w-10 flex-shrink-0 overflow-hidden rounded-full border border-zinc-700 bg-zinc-900">
                 <Image
                   src={exp.logoSrc}
                   alt={exp.logoAlt}
-                  width={48}
-                  height={48}
+                  width={40}
+                  height={40}
                   className="h-full w-full object-contain"
                 />
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-zinc-100">
+              <div className="space-y-1">
+                <h3 className="text-sm font-semibold text-zinc-100">
                   {exp.company}
                 </h3>
-                <div className="flex items-center gap-1.5 text-sm text-zinc-500 mt-1">
-                  <MapPin size={14} />
-                  {exp.location}
-                </div>
+                <p className="text-xs text-zinc-500">{exp.location}</p>
               </div>
             </div>
 
-            {/* Roles Timeline */}
-            <div className="relative ml-7 border-l border-zinc-800 pl-8 space-y-6">
-              {exp.roles.map((role, index) => (
-                <div key={`${exp.company}-${role.title}-${index}`} className="relative">
-                  {/* Timeline dot */}
-                  <div className="absolute -left-[2.55rem] top-1 h-3 w-3 rounded-full border-2 border-zinc-700 bg-zinc-950" />
+            {exp.roles.length > 1 ? (
+              <div className="relative pl-8">
+                <div className="space-y-6">
+                  {exp.roles.map((role, index) => (
+                    <div
+                      key={`${exp.company}-${role.title}-${role.from}-${role.to}`}
+                      className="relative"
+                    >
+                      <div className="absolute left-[-1.75rem] top-[1.1rem] h-2.5 w-2.5 rounded-full border border-zinc-600 bg-zinc-950 z-10" />
+                      {index < exp.roles.length - 1 && (
+                        <div className="absolute left-[-1.4375rem] top-[calc(1.1rem+0.3125rem)] h-[calc(100%+1.5rem)] w-px bg-zinc-800" />
+                      )}
+                      <article className="rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-all duration-300 ease-out hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)] cursor-pointer">
+                        <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                          <div className="space-y-1">
+                            <h4 className="text-sm font-medium text-zinc-100">
+                              {role.title}
+                            </h4>
+                            <p className="text-xs text-zinc-400">
+                              {exp.company}
+                            </p>
+                          </div>
+                          <div className="space-y-1 text-left sm:text-right">
+                            <p className="text-xs text-zinc-400">
+                              {exp.location}
+                            </p>
+                            <p className="text-xs text-zinc-500">
+                              {role.from} - {role.to}
+                            </p>
+                          </div>
+                        </div>
 
-                  <Card className="overflow-hidden">
-                    <CardContent className="pt-5">
-                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
-                        <div>
-                          <h4 className="text-base font-medium text-zinc-100">
+                        <ul className="mt-3 list-disc space-y-2 pl-4 text-sm text-zinc-300">
+                          {role.bullets.map((b) => (
+                            <li key={b}>{b}</li>
+                          ))}
+                        </ul>
+                      </article>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="pl-8">
+                <div className="space-y-6">
+                  {exp.roles.map((role) => (
+                    <article
+                      key={`${exp.company}-${role.title}-${role.from}-${role.to}`}
+                      className="rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)] cursor-pointer"
+                    >
+                      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                        <div className="space-y-1">
+                          <h4 className="text-sm font-medium text-zinc-100">
                             {role.title}
                           </h4>
+                          <p className="text-xs text-zinc-400">{exp.company}</p>
                         </div>
-                        <div className="flex items-center gap-1.5 text-sm text-zinc-500">
-                          <Calendar size={14} />
-                          {role.from} — {role.to}
+                        <div className="space-y-1 text-left sm:text-right">
+                          <p className="text-xs text-zinc-400">
+                            {exp.location}
+                          </p>
+                          <p className="text-xs text-zinc-500">
+                            {role.from} - {role.to}
+                          </p>
                         </div>
                       </div>
 
-                      <ul className="space-y-2 text-sm text-zinc-400">
-                        {role.bullets.map((bullet, bulletIndex) => (
-                          <li key={bulletIndex} className="flex gap-2">
-                            <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-zinc-600" />
-                            <span>{bullet}</span>
-                          </li>
+                      <ul className="mt-3 list-disc space-y-2 pl-4 text-sm text-zinc-300">
+                        {role.bullets.map((b) => (
+                          <li key={b}>{b}</li>
                         ))}
                       </ul>
-                    </CardContent>
-                  </Card>
+                    </article>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            )}
           </div>
         ))}
       </div>

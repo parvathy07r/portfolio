@@ -23,13 +23,11 @@ export default function Projects({ projects }: ProjectsProps) {
       title="Featured Projects"
       subtitle="A selection of projects I've worked on"
     >
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6">
         {projects.map((project) => (
           <Card
             key={`${project.title}-${project.date}`}
-            className={`group relative overflow-hidden ${
-              project.featured ? "md:col-span-2" : ""
-            }`}
+            className="group relative overflow-hidden"
           >
             {project.featured && (
               <div className="absolute top-4 right-4">

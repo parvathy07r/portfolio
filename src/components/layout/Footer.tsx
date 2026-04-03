@@ -21,17 +21,17 @@ function LinkedinIcon({ size = 20 }: { size?: number }) {
 const socialLinks = [
   {
     label: "GitHub",
-    href: "https://github.com",
+    href: "https://github.com/parvathy07r",
     icon: GithubIcon,
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/parvathy-r-135314243/",
     icon: LinkedinIcon,
   },
   {
     label: "Email",
-    href: "mailto:hello@example.com",
+    href: "mailto:parvathy07r@gmail.com",
     icon: Mail,
   },
 ];
