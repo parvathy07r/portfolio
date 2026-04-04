@@ -33,7 +33,7 @@ export default function Experience({ experiences }: ExperienceProps) {
         {experiences.map((exp) => (
           <div key={exp.company} className="space-y-5">
             <div className="flex items-start gap-4">
-              <div className="mt-1 h-10 w-10 flex-shrink-0 overflow-hidden rounded-full border border-zinc-700 bg-zinc-900">
+              <div className="mt-1 h-10 w-10 shrink-0 overflow-hidden rounded-full border border-zinc-700 bg-zinc-900 hover:-translate-y-1">
                 <Image
                   src={exp.logoSrc}
                   alt={exp.logoAlt}
@@ -62,7 +62,7 @@ export default function Experience({ experiences }: ExperienceProps) {
                       {index < exp.roles.length - 1 && (
                         <div className="absolute left-[-1.4375rem] top-[calc(1.1rem+0.3125rem)] h-[calc(100%+1.5rem)] w-px bg-zinc-800" />
                       )}
-                      <article className="rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-all duration-300 ease-out hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)] cursor-pointer">
+                      <article className="rounded-xl border border-zinc-800 bg-zinc-950/40 px-6 py-4 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-zinc-400 hover:bg-zinc-900/80 hover:shadow-[0_18px_45px_rgba(0,0,0,0.75)] cursor-pointer">
                         <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                           <div className="space-y-1">
                             <h4 className="text-sm font-medium text-zinc-100">

@@ -64,8 +64,6 @@ export default function Home() {
         "Implemented secure authentication with bcrypt password hashing and JWT sessions stored in HTTP-only cookies, plus route protection via Next.js middleware.",
         "Added optional Two-Factor Authentication (TOTP) including QR-based setup, verification, and disable flows integrated into the login experience.",
         "Developed a rich-text editor using Lexical with history/undo and custom media nodes (image/video), persisting content as JSON editor state.",
-        "Designed a debounced autosave system for title/content edits and used navigator.sendBeacon() on navigation to reduce risk of losing changes.",
-        "Created an authenticated media upload API with MIME-type allowlisting and file-size limits, returning public URLs for embedding.",
       ],
     },
     {
