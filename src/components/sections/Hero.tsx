@@ -51,11 +51,11 @@ export default function Hero({
       href: "https://www.linkedin.com/in/parvathy-r-135314243/",
       icon: LinkedinIcon,
     },
-    {
-      label: "Email",
-      href: "mailto:parvathy07r@gmail.com",
-      icon: Mail,
-    },
+    // {
+    //   label: "Email",
+    //   href: "mailto:parvathy07r@gmail.com",
+    //   icon: Mail,
+    // },
   ];
 
   return (

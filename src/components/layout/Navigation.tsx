@@ -48,7 +48,7 @@ export default function Navigation() {
               <button
                 key={item.label}
                 onClick={() => handleNavClick(item.href)}
-                className="px-4 py-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors rounded-lg hover:bg-zinc-800/50"
+                className="px-4 py-2 text-sm text-zinc-400 hover:text-zinc-100 cursor-pointer transition-colors rounded-lg hover:bg-zinc-800/50"
               >
                 {item.label}
               </button>

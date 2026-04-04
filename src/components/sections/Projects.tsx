@@ -27,7 +27,7 @@ export default function Projects({ projects }: ProjectsProps) {
         {projects.map((project) => (
           <Card
             key={`${project.title}-${project.date}`}
-            className="group relative overflow-hidden"
+            className="group relative overflow-hidden cursor-pointer"
           >
             {project.featured && (
               <div className="absolute top-4 right-4">

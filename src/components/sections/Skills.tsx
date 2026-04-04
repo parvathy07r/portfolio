@@ -24,7 +24,7 @@ export default function Skills({ skills }: SkillsProps) {
         {skills.map((skill) => (
           <Card
             key={skill.label}
-            className="group p-4 md:p-5 flex flex-col items-center justify-center text-center"
+            className="group p-4 md:p-5 flex flex-col items-center justify-center text-center cursor-pointer"
           >
             <div className="mb-3 flex h-10 w-10 md:h-12 md:w-12 items-center justify-center">
               <Image
