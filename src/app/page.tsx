@@ -31,8 +31,27 @@ export default function Home() {
     { label: "Git & GitHub", src: "/skills/github.svg" },
     { label: "Figma", src: "/skills/figma.svg" },
   ];
-
+  
   const projects = [
+    {
+      title: "DeepWeather: Weather Analysis with Deep Learning",
+      date: "February 2024",
+      tags: ["Python", "Deep Learning", "ML"],
+      bullets: [
+        "Developed deep learning models to predict weather conditions, with a focus on temperature forecasting.",
+        "Built and fine-tuned models to improve prediction accuracy.",
+        "Addressed challenges such as missing data handling, normalization, multicollinearity, overfitting, and vanishing gradients.",
+      ],
+    },
+    {
+      title: "Multiple Disease Prediction System",
+      date: "December 2022",
+      tags: ["Python", "Machine Learning", "Healthcare"],
+      bullets: [
+        "Designed and coded a web application to predict multiple diseases using machine learning.",
+        "Trained and tested multiple models to improve accuracy and personalization in predictions.",
+      ],
+    },
     {
       title: "TDC Play – Gamified Tourism Web App",
       date: "November 2025",
@@ -75,26 +94,7 @@ export default function Home() {
         "Implemented features for tracking expenses and managing budgets.",
         "Designed a clean and intuitive user interface for easy navigation.",
       ],
-    },
-    {
-      title: "DeepWeather: Weather Analysis with Deep Learning",
-      date: "February 2024",
-      tags: ["Python", "Deep Learning", "ML"],
-      bullets: [
-        "Developed deep learning models to predict weather conditions, with a focus on temperature forecasting.",
-        "Built and fine-tuned models to improve prediction accuracy.",
-        "Addressed challenges such as missing data handling, normalization, multicollinearity, overfitting, and vanishing gradients.",
-      ],
-    },
-    {
-      title: "Multiple Disease Prediction System",
-      date: "December 2022",
-      tags: ["Python", "Machine Learning", "Healthcare"],
-      bullets: [
-        "Designed and coded a web application to predict multiple diseases using machine learning.",
-        "Trained and tested multiple models to improve accuracy and personalization in predictions.",
-      ],
-    },
+    }
   ];
 
   const workExperience = [
