@@ -34,7 +34,7 @@ export default function Home() {
   
   const projects = [
     {
-      title: "DeepWeather: Weather Analysis with Deep Learning",
+      title: "DeepWeather - Weather Analysis with Deep Learning",
       date: "February 2024",
       tags: ["Python", "Deep Learning", "ML"],
       bullets: [
@@ -53,7 +53,7 @@ export default function Home() {
       ],
     },
     {
-      title: "TDC Play – Gamified Tourism Web App",
+      title: "TDC Play - Gamified Tourism Web App",
       date: "November 2025",
       // featured: true,
       tags: ["React", "Node.js", "PostgreSQL", "Hackathon"],
@@ -62,11 +62,11 @@ export default function Home() {
         "Implemented QR code scanning, mission tracking, scoring, and rewards UI.",
         "Designed dynamic and engaging user flows, improving user interaction.",
         "Collaborated with an international agile team of engineers.",
-        "Awarded Silver Yakumo Award – Hack Yakumo 2025.",
+        "Awarded Silver Yakumo Award - Hack Yakumo 2025.",
       ],
     },
     {
-      title: "Folio – Secure Rich‑Text Notes App",
+      title: "Folio - Secure Rich-Text Notes App",
       date: "April 2026",
       tags: [
         "Next.js",
