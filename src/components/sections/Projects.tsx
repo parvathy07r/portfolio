@@ -56,10 +56,10 @@ export default function Projects({ projects }: ProjectsProps) {
                     </a>
                   )}
                 </div>
-                <div className="flex items-center gap-2 text-sm text-zinc-500">
+                {/* <div className="flex items-center gap-2 text-sm text-zinc-500">
                   <Calendar size={14} />
                   {project.date}
-                </div>
+                </div> */}
               </div>
             </CardHeader>
 
